@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Жанр: {{ genre.name }}</title>
+</head>
+<body>
+    <h1>Книги в жанре: {{ genre.name }}</h1>
+    <ul>
+        {% for book in books %}
+        <li><strong>{{ book.title }}</strong> by {{ book.author }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('index') }}">Назад на главную</a>
+</body>
+</html>
